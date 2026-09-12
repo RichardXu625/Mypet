@@ -1,4 +1,7 @@
-document.addEventListener("DOMContentLoaded", () => {
+const initializePage = () => {
+  if (document.body.dataset.pageInitialized === "true") return;
+  document.body.dataset.pageInitialized = "true";
+
   const year = new Date().getFullYear();
   const footer = document.querySelector(".footer-inner p");
 
@@ -6,22 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
     footer.textContent = `© ${year} Wild Notes`;
   }
 
-  const tabs = document.querySelectorAll(".filter-tab");
-  const cards = document.querySelectorAll(".video-card");
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const selected = tab.dataset.filter;
-
-      tabs.forEach((item) => item.classList.toggle("active", item === tab));
-      cards.forEach((card) => {
-        const match = selected === "All" || card.dataset.category === selected;
-        card.style.display = match ? "block" : "none";
-      });
-    });
-  });
-
-  const petCards = document.querySelectorAll(".pet-card");
   const modal = document.getElementById("petModal");
   const modalImage = document.getElementById("modalImage");
   const modalName = document.getElementById("modalName");
@@ -33,6 +20,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalBackdrop = document.querySelector(".pet-modal-backdrop");
 
   const showPetModal = (card) => {
+    if (!modal || !modalImage || !modalName || !modalScientific || !modalOrigin || !modalBirth || !modalDescription) return;
+
     modalImage.src = card.dataset.image;
     modalImage.alt = card.dataset.name;
     modalName.textContent = card.dataset.name;
@@ -43,17 +32,36 @@ document.addEventListener("DOMContentLoaded", () => {
     modal.classList.remove("hidden");
   };
 
-  petCards.forEach((card) => {
-    card.addEventListener("click", () => showPetModal(card));
-  });
-
   const closePetModal = () => modal.classList.add("hidden");
 
-  modalClose.addEventListener("click", closePetModal);
-  modalBackdrop.addEventListener("click", closePetModal);
+  document.addEventListener("click", (event) => {
+    const tab = event.target.closest(".filter-tab");
+    const petCard = event.target.closest(".pet-card");
+
+    if (tab) {
+      const selected = tab.dataset.filter;
+      document.querySelectorAll(".filter-tab").forEach((item) => {
+        item.classList.toggle("active", item === tab);
+      });
+      document.querySelectorAll(".video-card").forEach((card) => {
+        const match = selected === "All" || card.dataset.category === selected;
+        card.style.display = match ? "" : "none";
+      });
+    }
+
+    if (petCard) showPetModal(petCard);
+    if (event.target.closest(".pet-modal-close, .pet-modal-backdrop")) closePetModal();
+  });
+
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape" && !modal.classList.contains("hidden")) {
+    if (modal && event.key === "Escape" && !modal.classList.contains("hidden")) {
       closePetModal();
     }
   });
-});
+};
+
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", initializePage);
+} else {
+  initializePage();
+}
