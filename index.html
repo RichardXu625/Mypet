@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>爬宠乐园</title>
+    <meta
+      name="description"
+      content="A personal vlog landing page featuring travel, lifestyle, and animal stories."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <div class="brand">Wild<span>Notes</span></div>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#home">Home</a>
+          <a href="#videos">Videos</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">travel • life • story</p>
+          <h1>分享我的爬宠世界精彩瞬间</h1>
+          <p class="subtitle">
+            欢迎来到我的爬宠频道！
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#videos">Watch latest</a>
+            <a class="btn btn-secondary" href="#about">About me</a>
+          </div>
+          <ul class="stats" aria-label="Channel stats">
+            <li><strong>120K+</strong><span>Subscribers</span></li>
+            <li><strong>540</strong><span>Videos</span></li>
+            <li><strong>8.9M</strong><span>Views</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual" aria-label="Featured vlog image">
+          <div class="image-card main-image">
+            <img
+              src="image/caton-1.jpg"
+              alt="Person smiling outdoors"
+            />
+          </div>
+          <div class="floating-badge">
+            <span class="badge-label">Latest upload</span>
+            <strong>City Nights</strong>
+            <small>12 min</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-strip">
+        <div class="container strip-grid">
+          <div>
+            <span class="mini-label">Featured</span>
+            <h2>New adventures every week</h2>
+          </div>
+          <p>
+            From daily routines to travel stories, I document real life, gentle moments, and every scene worth remembering.
+          </p>
+        </div>
+      </section>
+
+      <section class="pet-profile container">
+        <div class="section-heading">
+          <p class="eyebrow">pet profile</p>
+          <h2>我的爬宠家庭</h2>
+        </div>
+
+        <div class="pet-grid" id="petGrid">
+          <div class="pet-category-row">
+            <div class="pet-category-header">
+              <span class="pet-category-icon">🦎</span>
+              <span class="pet-category-name">Lizard</span>
+            </div>
+            <div class="pet-row-cards">
+              <button
+                class="pet-card"
+                type="button"
+                data-category="Lizard"
+                data-name="牛角包"
+                data-scientific="巨人守宫/Leach's Giant Gecko"
+                data-origin="新喀里多尼亚"
+                data-birth="2026-05"
+                data-description="原产新喀里多尼亚。现存体型最大守宫，成体体重 200–300g，寿命 15–25 年，卵生，每次产 2 枚卵，性情沉稳，多为人工繁育个体"
+                data-image="image/croissant-1.jpg"
+              >
+                <span class="pet-avatar"><img src="image/croissant-1.jpg" alt="牛角包" /></span>
+                <span class="pet-name">牛角包</span>
+              </button>
+              <button
+                class="pet-card"
+                type="button"
+                data-category="Lizard"
+                data-name="睫角守宫"
+                data-scientific="睫角守宫/Crested Gecko"
+                data-origin="新喀里多尼亚"
+                data-birth="2026-05"
+                data-description="原产新喀里多尼亚。成体体重 35–50g，人工饲养寿命 15–20 年，卵生，每次产 2 枚卵，性格温顺，为热门人工繁育宠物守宫。"
+                data-image="image/jiejiao-2.jpg"
+              >
+                <span class="pet-avatar"><img src="image/jiejiao-2.jpg" alt="睫角守宫" /></span>
+                <span class="pet-name">睫角守宫</span>
+              </button>
+              <button
+                class="pet-card"
+                type="button"
+                data-category="Lizard"
+                data-name="鬃狮蜥"
+                data-scientific="Central Bearded Dragon"
+                data-origin="澳大利亚"
+                data-birth="2024-05-21"
+                data-description="原产澳大利亚干旱区。成体体重 300–500g，人工饲养寿命 8–12 年，卵生，每窝产卵 15–30 枚，性情温顺，是热门人工繁育宠物蜥蜴。"
+                data-image="image/zongshi-1.jpg"
+              >
+                <span class="pet-avatar"><img src="image/zongshi-1.jpg" alt="鬃狮蜥" /></span>
+                <span class="pet-name">鬃狮蜥</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="pet-category-row">
+            <div class="pet-category-header">
+              <span class="pet-category-icon">🐸</span>
+              <span class="pet-category-name">Frog</span>
+            </div>
+            <div class="pet-row-cards">
+              <button
+                class="pet-card"
+                type="button"
+                data-category="Frog"
+                data-name="咖啡豆"
+                data-scientific="老爷树蛙/White's Tree Frog"
+                data-origin="澳大利亚东北部、巴布亚新几内亚"
+                data-birth="2022-11-08"
+                data-description="原产澳大利亚东北部、巴布亚新几内亚。成体体重 70–100g，人工饲养寿命 15–20 年，水中产卵，单次可产数百枚，体态圆润呆萌，性格温顺，热门人工繁育宠物蛙。"
+                data-image="image/kafeidou-1.jpg"
+              >
+                <span class="pet-avatar"><img src="image/kafeidou-1.jpg" alt="咖啡豆" /></span>
+                <span class="pet-name">咖啡豆</span>
+              </button>
+              <button
+                class="pet-card"
+                type="button"
+                data-category="Frog"
+                data-name="霸王角蛙"
+                data-scientific="Lithobates catesbeianus"
+                data-origin="Freshwater marshes"
+                data-birth="2023-06-18"
+                data-description="Bawang is a confident little frog with a lively personality. He enjoys quiet ponds, gentle rain, and being the first to discover something interesting."
+                data-image="image/bawang-1.jpg"
+              >
+                <span class="pet-avatar"><img src="image/bawang-1.jpg" alt="霸王角蛙" /></span>
+                <span class="pet-name">霸王角蛙</span>
+              </button>
+              <button
+                class="pet-card"
+                type="button"
+                data-category="Frog"
+                data-name="钵子角蛙"
+                data-scientific="Lithobates catesbeianus"
+                data-origin="Freshwater marshes"
+                data-birth="2023-09-24"
+                data-description="Bozi is a gentle frog who loves resting near the water and listening to the evening chorus. His calm presence makes every pond feel a little more peaceful."
+                data-image="image/bozi-1.jpg"
+              >
+                <span class="pet-avatar"><img src="image/bozi-1.jpg" alt="钵子角蛙" /></span>
+                <span class="pet-name">钵子角蛙</span>
+              </button>
+              <button
+                class="pet-card"
+                type="button"
+                data-category="Frog"
+                data-name="小丑蛙"
+                data-scientific="Lithobates catesbeianus"
+                data-origin="Freshwater marshes"
+                data-birth="2024-03-07"
+                data-description="Xiaochou is a playful frog with a curious nature and a talent for turning ordinary pond time into a small adventure."
+                data-image="image/xiaochou-1.jpg"
+              >
+                <span class="pet-avatar"><img src="image/xiaochou-1.jpg" alt="小丑蛙" /></span>
+                <span class="pet-name">小丑蛙</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="pet-category-row">
+            <div class="pet-category-header">
+              <span class="pet-category-icon">🐢</span>
+              <span class="pet-category-name">Turtle</span>
+            </div>
+            <div class="pet-row-cards">
+              <button
+                class="pet-card"
+                type="button"
+                data-category="Turtle"
+                data-name="黄缘闭壳龟"
+                data-scientific="Chelonoidis carbonaria"
+                data-origin="中国"
+                data-birth="2023-08-11"
+                data-description="原产中国华中、华南及台湾，半水龟。成体母龟约 700–1000g，公龟 300–500g，人工饲养寿命 40–60 年，卵生，每窝产卵 2–4 枚，遇敌可完全闭壳，性格温顺。"
+                data-image="image/huangyuan-1.jpg"
+              >
+                <span class="pet-avatar"><img src="image/huangyuan-1.jpg" alt="黄缘闭壳龟" /></span>
+                <span class="pet-name">黄缘闭壳龟</span>
+              </button>
+              <button
+                class="pet-card"
+                type="button"
+                data-category="Turtle"
+                data-name="侧颈龟"
+                data-scientific="Chelonoidis carbonaria"
+                data-origin="Tropical forest floor"
+                data-birth="2024-06-02"
+                data-description="Shejinggui is a quiet and steady turtle who enjoys warm sunlight, slow walks, and peaceful time among the leaves."
+                data-image="image/shejinggui-1.jpg"
+              >
+                <span class="pet-avatar"><img src="image/shejinggui-1.jpg" alt="侧颈龟" /></span>
+                <span class="pet-name">侧颈龟</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="pet-category-row">
+            <div class="pet-category-header">
+              <span class="pet-category-icon">🕊️</span>
+              <span class="pet-category-name">Phoenix</span>
+            </div>
+            <div class="pet-row-cards">
+              <button
+                class="pet-card"
+                type="button"
+                data-category="Other"
+                data-name="小白"
+                data-scientific="Phoenicopterus roseus"
+                data-origin="Coastal wetlands"
+                data-birth="2024-02-03"
+                data-description="Xiaobai is a graceful, bold presence and a reminder that beauty can bloom in unexpected places. She has a vivid spirit and a calm elegance, carrying herself with a quiet confidence that lights up every corner of the flock."
+                data-image="image/xiaobai-2.jpg"
+              >
+                <span class="pet-avatar"><img src="image/xiaobai-2.jpg" alt="小白" /></span>
+                <span class="pet-name">小白</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="videos" class="videos container">
+        <div class="section-heading">
+          <p class="eyebrow">recent uploads</p>
+          <h2>Recent videos</h2>
+        </div>
+
+        <div class="filter-tabs" role="tablist" aria-label="Video categories">
+          <button class="filter-tab active" type="button" data-filter="All">All</button>
+          <button class="filter-tab" type="button" data-filter="Lizard">🦎 Lizard</button>
+          <button class="filter-tab" type="button" data-filter="Frog">🐸 Frog</button>
+          <button class="filter-tab" type="button" data-filter="Turtle">🐢 Turtle</button>
+          <button class="filter-tab" type="button" data-filter="Other">🕊️ Phoenix</button>
+        </div>
+
+        <div class="video-grid" id="videoGrid">
+          <article class="video-card" data-category="Lizard">
+            <img src="image/jiejiao-1.jpg" alt="睫角守宫视频封面" />
+            <div class="video-info">
+              <span>Photo</span>
+              <h3>睫角守宫瞬间</h3>
+            </div>
+          </article>
+
+          <article class="video-card" data-category="Lizard">
+            <img src="image/croissant-2.jpg" alt="牛角包视频封面" />
+            <div class="video-info">
+              <span>Photo</span>
+              <h3>牛角包瞬间</h3>
+            </div>
+          </article>
+
+          <article class="video-card" data-category="Other">
+            <video controls preload="metadata" width="100%" aria-label="Phoenix video">
+              <source src="image/xiaobai-v-1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-info">
+              <span>Video</span>
+              <h3>小白瞬间</h3>
+            </div>
+          </article>
+
+          <article class="video-card" data-category="Other">
+            <img src="image/xiabai-1.jpg" alt="小白视频封面" />
+            <div class="video-info">
+              <span>Photo</span>
+              <h3>小白肖像</h3>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="about" class="about container">
+        <div class="section-heading left">
+          <p class="eyebrow">about me</p>
+          <h2>Life in motion</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-photo">
+            <img
+              src="image/bawanglong-1.jpg"
+              alt="Creator portrait"
+            />
+          </div>
+          <div class="about-copy">
+            <p>
+              欢迎来到我的频道！我一直热衷于古生物研究，恐龙是我的心头好。也正因如此，我对远古爬行动物、两栖动物格外感兴趣。我会翻阅各类资料，也饲养了守宫、蛙和乌龟，在日常观察中，感受跨越亿年的生命故事。
+            </p>
+            <p>
+              Welcome to my channel! I’ve always been passionate about paleontology, with dinosaurs as my greatest fascination. For this reason, I’m also deeply interested in ancient reptiles and amphibians. I read all kinds of materials, and I keep geckos, frogs and turtles as pets. Through observing them daily, I get to feel the stories of life spanning hundreds of millions of years.
+            </p>
+            <a class="btn btn-primary" href="#contact">Work with me</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact container">
+        <div class="section-heading">
+          <p class="eyebrow">let's connect</p>
+          <h2>Follow along</h2>
+        </div>
+
+        <div class="socials" aria-label="Social media links">
+          <a href="#" aria-label="YouTube">YouTube</a>
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="TikTok">TikTok</a>
+          <a href="#" aria-label="Email">Email</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© 2026 Wild Notes</p>
+      </div>
+    </footer>
+
+    <div class="pet-modal hidden" id="petModal" aria-hidden="true">
+      <div class="pet-modal-backdrop"></div>
+      <div class="pet-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalName">
+        <button class="pet-modal-close" type="button" aria-label="Close">×</button>
+        <div class="pet-modal-content">
+          <img id="modalImage" src="" alt="Pet profile" />
+          <div class="pet-modal-text">
+            <h3 id="modalName">Pet Name</h3>
+            <p class="scientific" id="modalScientific">Scientific Name</p>
+            <ul class="pet-modal-details">
+              <li><span>Origin</span><strong id="modalOrigin">-</strong></li>
+              <li><span>Birth date</span><strong id="modalBirth">-</strong></li>
+            </ul>
+            <p class="pet-modal-description" id="modalDescription">
+              Pet description goes here.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
