@@ -1,0 +1,263 @@
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: min(100% - 24px, 540px);
+}
+
+.nav {
+  align-items: flex-start;
+  gap: 12px;
+  min-height: 0;
+  padding: 14px 0;
+}
+
+.brand {
+  flex: 0 0 auto;
+  font-size: 1.2rem;
+  letter-spacing: 0.08rem;
+}
+
+.nav-links {
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 3px 12px;
+  font-size: 0.75rem;
+  line-height: 1.35;
+}
+
+.nav-links a::after {
+  bottom: -3px;
+}
+
+.hero {
+  gap: 32px;
+  padding: 52px 0 40px;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.45rem, 13vw, 4rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.subtitle {
+  font-size: 0.96rem;
+}
+
+.hero-actions {
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.btn {
+  min-height: 46px;
+  padding: 0 17px;
+  font-size: 0.88rem;
+}
+
+.stats {
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.stats li {
+  min-width: 0;
+}
+
+.stats strong {
+  font-size: 1.2rem;
+}
+
+.stats span {
+  font-size: 0.7rem;
+}
+
+.main-image {
+  width: 100%;
+  border-radius: 22px;
+}
+
+.main-image img {
+  height: min(112vw, 470px);
+}
+
+.floating-badge {
+  left: 12px;
+  bottom: 16px;
+  max-width: calc(100% - 24px);
+  padding: 12px 14px;
+  border-radius: 16px;
+}
+
+.floating-badge strong {
+  margin-top: 4px;
+  font-size: 1rem;
+}
+
+.strip-grid {
+  gap: 14px;
+  padding: 20px 18px;
+  border-radius: 20px;
+}
+
+.strip-grid h2 {
+  font-size: 1.65rem;
+  line-height: 1.15;
+}
+
+.strip-grid p {
+  font-size: 0.9rem;
+}
+
+.pet-profile,
+.videos,
+.about,
+.contact {
+  padding: 50px 0;
+}
+
+.section-heading {
+  margin-bottom: 22px;
+}
+
+.section-heading h2 {
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.pet-grid {
+  gap: 16px;
+}
+
+.pet-category-row {
+  gap: 14px;
+  padding: 15px 12px 18px;
+  border-radius: 18px;
+}
+
+.pet-row-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 8px;
+}
+
+.pet-avatar {
+  width: min(31vw, 126px);
+  height: min(31vw, 126px);
+}
+
+.pet-name {
+  font-size: 0.98rem;
+  text-align: center;
+}
+
+.filter-tabs {
+  flex-wrap: nowrap;
+  gap: 8px;
+  overflow-x: auto;
+  margin-right: -12px;
+  padding: 2px 12px 10px 0;
+  scrollbar-width: none;
+}
+
+.filter-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-tab {
+  flex: 0 0 auto;
+  min-height: 42px;
+  padding: 9px 13px;
+  font-size: 0.82rem;
+}
+
+.video-grid {
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.video-card {
+  border-radius: 18px;
+}
+
+.video-card img,
+.video-card video {
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.video-info {
+  padding: 14px 16px 18px;
+}
+
+.video-info h3 {
+  margin-top: 8px;
+  font-size: 1.22rem;
+}
+
+.about-photo img {
+  height: min(112vw, 460px);
+  border-radius: 22px;
+}
+
+.about-copy {
+  font-size: 0.95rem;
+}
+
+.socials {
+  gap: 10px;
+}
+
+.socials a {
+  padding: 10px 13px;
+  font-size: 0.86rem;
+}
+
+.pet-modal {
+  align-items: flex-end;
+  padding: 12px;
+}
+
+.pet-modal-dialog {
+  width: 100%;
+  max-height: calc(100dvh - 24px);
+  overflow-y: auto;
+  border-radius: 22px;
+}
+
+.pet-modal-content img {
+  height: min(78vw, 330px);
+  min-height: 0;
+}
+
+.pet-modal-text {
+  padding: 24px 20px 26px;
+}
+
+.pet-modal-text h3 {
+  font-size: 1.8rem;
+}
+
+.pet-modal-details li {
+  align-items: flex-start;
+  font-size: 0.88rem;
+}
+
+.footer-inner {
+  min-height: 64px;
+  font-size: 0.8rem;
+}
+
+.mobile-loading {
+  width: min(100% - 32px, 420px);
+  margin: 35vh auto 0;
+  color: #b7c3d4;
+  text-align: center;
+}
+
+.mobile-loading a {
+  color: #fbbf24;
+}

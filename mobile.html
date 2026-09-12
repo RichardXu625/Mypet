@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="爬宠乐园移动版" />
+    <title>爬宠乐园 · 移动版</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mobile.css" />
+  </head>
+  <body>
+    <div class="mobile-loading" id="mobileApp">正在加载页面...</div>
+
+    <script>
+      const mobileApp = document.getElementById("mobileApp");
+
+      fetch("index.html")
+        .then((response) => {
+          if (!response.ok) throw new Error("无法读取原网页");
+          return response.text();
+        })
+        .then((html) => {
+          const source = new DOMParser().parseFromString(html, "text/html");
+          const content = Array.from(source.body.children).filter(
+            (element) => element.tagName !== "SCRIPT"
+          );
+
+          mobileApp.replaceChildren(...content);
+          document.title = `${source.title} · 移动版`;
+
+          const script = document.createElement("script");
+          script.src = "script.js";
+          document.body.appendChild(script);
+        })
+        .catch(() => {
+          mobileApp.innerHTML = '<p>页面加载失败，请检查网站地址。</p><a href="index.html?desktop=1">打开电脑版</a>';
+        });
+    </script>
+  </body>
+</html>
