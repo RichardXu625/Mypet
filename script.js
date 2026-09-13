@@ -4,6 +4,15 @@ const initializePage = () => {
 
   const year = new Date().getFullYear();
   const footer = document.querySelector(".footer-inner p");
+  const videoCount = document.querySelectorAll("#videoGrid .video-card").length;
+  const videoStat = [...document.querySelectorAll(".stats li")].find((item) =>
+    item.querySelector("span")?.textContent.trim().toLowerCase() === "videos"
+  );
+
+  if (videoStat) {
+    const videoCountText = videoStat.querySelector("strong");
+    if (videoCountText) videoCountText.textContent = videoCount;
+  }
 
   if (footer) {
     footer.textContent = `© ${year} Wild Notes`;
